@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     border: none;
@@ -6,7 +6,7 @@
     text-decoration: none;
 }
 
-html{
+html {
     --black: #0D114F;
     --white: #FAFAFA;
     --red: #E83F5B;
@@ -18,23 +18,88 @@ html{
     --grey-dark: #4D5E77;
     --grey-blue: #A1B2CD;
     --grey-light: #E5EAF1;
-
-     font-size: 62.5%;
+    font-size: 62.5%;
 }
 
-body{
+.content {
+    width: 100%;
+    margin: 0 auto;
+}
+
+body {
     height: 100vh;
     background: var(--background);
 }
 
-body, button, input, textarea{
+body,
+button,
+input,
+textarea {
     /* Intervalo de tamanho */
     font-size: clamp(14px, 1.6rem, 2vw);
-
     font-family: 'Open Sans', sans-serif;
     /* font-family: 'Poppins', sans-serif; */
 }
 
-.sr-only{
-    /* opacity: 0; */
+.sr-only {
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    padding: 0px;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+
+/* INPUT E BUTTONS */
+
+input,
+button,
+.button {
+    border-radius: .8rem;
+    height: 5rem;
+}
+
+button,
+.button {
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    background-color: var(--blue);
+    line-height: 0;
+    cursor: pointer;
+    transition: filter .2s;
+}
+
+button:hover,
+.button:hover {
+    filter: brightness(1.2);
+}
+
+button>img,
+.button>img {
+    margin-right: 1rem;
+    width: 2rem;
+}
+
+button.outlined,
+.button.outlined {
+    background: var(--white);
+    color: var(--blue);
+    border: .2rem solid var(--blue)
+}
+
+.content header {
+    width: 80%;
+    margin: 3.5rem auto;
+}
+
+.content header img {
+    width: 16.7rem;
 }
